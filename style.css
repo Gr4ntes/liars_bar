@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'jaro';
+    src: url('fonts/Jaro-Regular-VariableFont_opsz.ttf') format('truetype')
+}
+
+body {
+    background-image: url('images/background_upscaled.png');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    font-family: 'jaro'; 
+}
+
+#dimmed-background {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 90%;
+    width: 90%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#heading {  
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin: 15px;
+}
+
+.create-player {
+    color: white; 
+    margin: 15px;
+}
+
+.create-player-form, .create-player, .player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-carousel {
+    display: flex;
+    flex-direction: row;
+}
+
+#create-player-button {
+    font-family: "jaro";
+    background-color: #e0561b;
+    color: white;
+    padding: 10px 20px;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#current-image {
+    width: 224px;
+    height: 224px;
+    border-radius: 20px;
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.player-card-name {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.player-card-img {
+    width: 224px;
+    height: 224px;
+    border-radius: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}

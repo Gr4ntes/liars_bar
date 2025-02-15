@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Liar's Bar" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dfc21296da.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Liar's Bar</title>
+</head>
+<body>
+    <div id="dimmed-background">
+        <h1 id="heading">Liar's Bar</h1>
+        <div id="container">
+            <div class="create-player">
+                <h2>Create Player</h2>
+                <div class="image-carousel">
+                    <!-- Left Button -->
+                    <button type="button" class="nav-button" id="prev-button"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+        
+                    <!-- Image Display -->
+                    <div class="image-container">
+                        <img id="current-image" src="images/bull.png" alt="Image 1">
+                    </div>
+        
+                    <!-- Right Button -->
+                    <button type="button" class="nav-button" id="next-button"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+                </div>
+        
+                <!-- Hidden Input to Store Selected Image -->
+                <input type="hidden" id="selected-image" name="selected-image" value="image1.jpg">
+                <div class="create-player-form">
+                    <label for="player-name">Player Name:</label>
+                    <input type="text" id="player-name" name="player-name" required>
+                    <button id="create-player-button" type="button">Create Player</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
