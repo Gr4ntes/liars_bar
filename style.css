@@ -51,7 +51,7 @@ body {
     flex-direction: row;
 }
 
-#create-player-button {
+#create-player-button, .shoot-button {
     font-family: "jaro";
     background-color: #e0561b;
     color: white;
@@ -90,3 +90,214 @@ body {
     flex-direction: row-reverse;
     justify-content: center;
 }
+
+.style {
+    position: absolute;
+    margin: -1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: #060606;
+    --az: calc(var(--i) * 1turn / var(--n));
+    font: 1.35em/2 trebuchet ms, sans-serif;
+    text-align: center;
+    counter-reset: i var(--i);
+  
+    &.cylinder {
+      transform: rotate(var(--az)) translate(4.7em) rotate(calc(-1 * var(--az)));
+    }
+  
+    &.round {
+      transform: rotate(var(--az)) translate(3em)
+        rotate(calc(-1 * var(--az) - 30deg));
+    }
+  
+    &.center {
+      top: 50%;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+.circle_cont {
+    background-color: #686868;
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rotate 5.5s cubic-bezier(0.1, 0.5, 0.4, 1) infinite;
+  }
+
+.round_styles {
+    position: relative;
+    top: 75%;
+    left: 44%;
+    transform: rotate(30deg);
+  }
+.middle {
+    width: 1.5em;
+    height: 1.5em;
+    background: rgb(43, 41, 41);
+    border-radius: 50%;
+  }
+.bullet {
+    background: #ffe49f;
+    z-index: 5;
+    backdrop-filter: blur(1.5rem);
+    width: 1.9em;
+    height: 1.9em;
+    border-radius: 50%;
+    margin: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &._1 {
+      animation: cycle 5.5s infinite;
+    }
+    &._2 {
+      animation: cycle2 5.5s infinite;
+    }
+    &._3 {
+      animation: cycle3 5.5s infinite;
+    }
+    &._4 {
+      animation: cycle4 5.5s infinite;
+    }
+    &._5 {
+      animation: cycle5 5.5s infinite;
+    }
+    &._6 {
+      animation: cycle6 5.5s infinite;
+    }
+  }
+
+.inner-bullet-border {
+    background: #b97532;
+    z-index: 6;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-bullet-inside {
+    background: #ffe49f;
+    z-index: 6;
+    width: 1.0em;
+    height: 1.0em;
+    clip-path: circle(50% at center);
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    14% {
+      transform: rotate(60deg);
+    }
+    28% {
+      transform: rotate(120deg);
+    }
+    42% {
+      transform: rotate(180deg);
+    }
+    56% {
+      transform: rotate(240deg);
+    }
+    70% {
+      transform: rotate(300deg);
+    }
+    84% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+@keyframes cycle {
+    2% {
+      opacity: 100;
+    }
+    5% {
+      opacity: 0;
+    }
+    85% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 100;
+    }
+  }
+@keyframes cycle2 {
+    70% {
+      opacity: 100;
+    }
+    75% {
+      opacity: 0;
+    }
+    87% {
+      opacity: 0;
+    }
+    88% {
+      opacity: 100;
+    }
+  }
+@keyframes cycle3 {
+    55% {
+      opacity: 100;
+    }
+    60% {
+      opacity: 0;
+    }
+    88% {
+      opacity: 0;
+    }
+    89% {
+      opacity: 100;
+    }
+  }
+@keyframes cycle4 {
+    40% {
+      opacity: 100;
+    }
+    45% {
+      opacity: 0;
+    }
+    89% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 100;
+    }
+  }
+@keyframes cycle5 {
+    27% {
+      opacity: 100;
+    }
+    32% {
+      opacity: 0;
+    }
+    91% {
+      opacity: 0;
+    }
+    92% {
+      opacity: 100;
+    }
+  }
+@keyframes cycle6 {
+    15% {
+      opacity: 100;
+    }
+    20% {
+      opacity: 0;
+    }
+    93% {
+      opacity: 0;
+    }
+    94% {
+      opacity: 100;
+    }
+  }
