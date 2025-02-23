@@ -1,6 +1,7 @@
 const images = ["bull.png", "bunny.png", "fox.png", "fox_female.png", "pig.png", "wolf.png"];
 let current_index = 0;
 
+
 const currentImageElement = document.getElementById("current-image");
 const selectedImageInput = document.getElementById("selected-image");
 const prevButton = document.getElementById("prev-button");
@@ -8,6 +9,18 @@ const nextButton = document.getElementById("next-button");
 const createButton = document.getElementById("create-player-button");
 const nameInput = document.getElementById("player-name");
 const container = document.getElementById("container");
+
+class Player {
+    constructor(name, image, bullet, current_index) {
+        this.name = name;
+        this.image = image;
+        this.bullet = bullet;
+        this.current_index = current_index;
+    }
+}
+
+let players = [];
+let names = []
 
 function changeImage() {
     currentImageElement.src = "images/" + images[current_index];
@@ -35,7 +48,11 @@ nextButton.addEventListener("click", () => {
 });
 
 createButton.addEventListener("click", () => {
-    if (nameInput.value != "") {
+    if (nameInput.value != "" && !names.includes(nameInput.value)) {
+        if (players.length >= 3) {
+            const card = document.getElementById("create-player-card");
+            card.style.display = "none";
+        }
         const player_card = document.createElement("div");
         player_card.classList.add("player-card");
         const player_card_name = document.createElement("h2");
@@ -46,6 +63,10 @@ createButton.addEventListener("click", () => {
         player_card_img.src = selectedImageInput.value;
         player_card.appendChild(player_card_name);
         player_card.appendChild(player_card_img);
+
+        let player = new Player(nameInput.value, selectedImageInput.value, Math.floor(Math.random() * 6), 0);
+        players.push(player);
+        names.push(player.name);
         
         // Get the container element by its ID
         const circleCont = document.createElement('div');
@@ -97,18 +118,31 @@ createButton.addEventListener("click", () => {
         
         circleCont.appendChild(centerDiv);
         player_card.appendChild(circleCont);
+
+        const deadStampImage = document.createElement('img');
+        deadStampImage.src = "images/dead_stamp.png"
+        deadStampImage.classList.add("dead-stamp-image")
+        player_card.appendChild(deadStampImage);
         
 
         const shootButton = document.createElement("button");
         shootButton.classList.add("shoot-button");
         shootButton.innerText = "Test your luck!";
         shootButton.addEventListener("click", async () => {
+            if (player.current_index == player.bullet) {
+                console.log("dead " + player.current_index + " " + player.name + " " + player.bullet);
+                deadStampImage.style.display = "block";
+                shootButton.style.display = "none";
+            } else {
+                console.log("click " + player.current_index + " " + player.name + " " + player.bullet);
+            }
+                player.current_index += 1;
+            
             circleCont.style.animationPlayState = "running";
             for (i = 0; i < bullets.length; i++ ){
                 bullets[i].style.animationPlayState = "running";
             }
             await new Promise(r => setTimeout(r, 700));
-            console.log("sleep finished");
             circleCont.style.animationPlayState = "paused";
             for (i = 0; i < bullets.length; i++ ){
                 bullets[i].style.animationPlayState = "paused";

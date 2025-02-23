@@ -39,6 +39,12 @@ body {
     margin: 15px;
 }
 
+.player-card {
+	position: relative;
+  	margin-left: 20px;
+  	margin-right: 20px;
+}
+
 .create-player-form, .create-player, .player-card {
     display: flex;
     flex-direction: column;
@@ -49,6 +55,21 @@ body {
 .image-carousel {
     display: flex;
     flex-direction: row;
+}
+
+.dead-stamp-image {
+	position: absolute;
+	background-color: #0808087f;
+	z-index: 6;
+	border-radius: 20px;
+	top: 20%;
+	rotate: 90deg;
+	display: none;
+}
+
+.shoot-button {
+	position: relative;
+	top: -50px;
 }
 
 #create-player-button, .shoot-button {
@@ -113,11 +134,11 @@ body {
     }
   
     &.center {
-      top: 50%;
-      left: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    	top: 50%;
+    	left: 50%;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
     }
   }
 .circle_cont {
@@ -125,6 +146,8 @@ body {
     border: 5px solid black;
     width: 200px;
     height: 200px;
+    position: relative;
+    top: -50px;
     border-radius: 50%;
     animation: rotate 5.5s cubic-bezier(0.1, 0.5, 0.4, 1) infinite;
   }
@@ -153,22 +176,22 @@ body {
     justify-content: center;
     align-items: center;
     &._1 {
-      animation: cycle 5.5s infinite;
+    	animation: cycle 5.5s infinite;
     }
     &._2 {
-      animation: cycle2 5.5s infinite;
+    	animation: cycle2 5.5s infinite;
     }
     &._3 {
-      animation: cycle3 5.5s infinite;
+    	animation: cycle3 5.5s infinite;
     }
     &._4 {
-      animation: cycle4 5.5s infinite;
+    	animation: cycle4 5.5s infinite;
     }
     &._5 {
-      animation: cycle5 5.5s infinite;
+    	animation: cycle5 5.5s infinite;
     }
     &._6 {
-      animation: cycle6 5.5s infinite;
+    	animation: cycle6 5.5s infinite;
     }
   }
 
