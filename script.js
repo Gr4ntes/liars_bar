@@ -155,3 +155,21 @@ createButton.addEventListener("click", () => {
 
 // Initialize the first image
 changeImage();
+
+// Function to handle fullscreen changes
+function handleFullscreenChange() {
+    const body = document.body;
+
+    // Check if the window is in fullscreen mode
+    if (window.innerHeight === screen.height) {
+        body.classList.add('fullscreen');
+    } else {
+        body.classList.remove('fullscreen');
+    }
+}
+
+// Listen for resize events (including fullscreen changes)
+window.addEventListener('resize', handleFullscreenChange);
+
+// Initial check in case the page loads in fullscreen
+handleFullscreenChange();

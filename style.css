@@ -9,13 +9,21 @@
 }
 
 body {
-    background-image: url('images/background_upscaled.png');
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    font-family: 'jaro', 'orelegaOne'; 
+	background-image: url('images/background_upscaled.png');
+	background-color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh; /* Use viewport height */
+	width: 100vw; /* Use viewport width */
+	font-family: 'jaro', 'orelegaOne';
+	margin: 0; 
+	overflow: hidden; /* Prevent scrollbars */
+}
+
+body.fullscreen {
+	background-size: 110% 110%; /* Zoom in slightly */
+	transition: background-size 0.3s ease;
 }
 
 #dimmed-background {
