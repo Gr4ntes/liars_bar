@@ -3,6 +3,11 @@
     src: url('fonts/Jaro-Regular-VariableFont_opsz.ttf') format('truetype')
 }
 
+@font-face {
+  font-family: 'orelegaOne';
+  src: url('fonts/OrelegaOne-Regular.ttf') format('truetype')
+}
+
 body {
     background-image: url('images/background_upscaled.png');
     background-color: black;
@@ -10,7 +15,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    font-family: 'jaro'; 
+    font-family: 'jaro', 'orelegaOne'; 
 }
 
 #dimmed-background {
