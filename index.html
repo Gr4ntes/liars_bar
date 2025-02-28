@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="Liar's Bar" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload fonts -->
+    <link rel="preload" href="fonts/OrelegaOne-Regular.ttf" as="font" type="truetype" crossorigin>
+    <link rel="preload" href="fonts/Jaro-Regular-VariableFont_opsz.ttf" as="font" type="truetype" crossorigin>
+    <!-- Preload images -->
+    <link rel="preload" href="images/background_upscaled.png" as="image">
+    <link rel="preload" href="images/bull.png" as="image">
+    <link rel="preload" href="images/bunny.png" as="image">
+    <link rel="preload" href="images/dead_stamp.png" as="image">
+    <link rel="preload" href="images/fox.png" as="image">
+    <link rel="preload" href="images/fox_female.png" as="image">
+    <link rel="preload" href="images/pig.png" as="image">
+    <link rel="preload" href="images/wolf.png" as="image">
     <script src="https://kit.fontawesome.com/dfc21296da.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>Liar's Bar</title>
@@ -20,7 +32,7 @@
         
                     <!-- Image Display -->
                     <div class="image-container">
-                        <img id="current-image" src="images/bull.png" alt="Image 1">
+                        <img id="current-image" src="images/bull.png" alt="Image 1" loading="lazy">
                     </div>
         
                     <!-- Right Button -->

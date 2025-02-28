@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'orelegaOne';
-  src: url('fonts/OrelegaOne-Regular.ttf') format('truetype')
+  	font-family: 'orelegaOne';
+  	src: url('fonts/OrelegaOne-Regular.ttf') format('truetype')
 }
 
 body {
@@ -53,8 +53,8 @@ body.fullscreen {
 }
 
 .player-card {
-	position: relative;
-  	margin-left: 20px;
+    position: relative;
+    margin-left: 20px;
   	margin-right: 20px;
 }
 
@@ -114,8 +114,8 @@ body.fullscreen {
 }
 
 .player-card-img {
-    width: 224px;
-    height: 224px;
+    max-width: 224px;
+    max-height: 224px;
     border-radius: 20px;
 }
 
@@ -138,11 +138,11 @@ body.fullscreen {
     counter-reset: i var(--i);
   
     &.cylinder {
-      transform: rotate(var(--az)) translate(4.7em) rotate(calc(-1 * var(--az)));
+      	transform: rotate(var(--az)) translate(4.7em) rotate(calc(-1 * var(--az)));
     }
   
     &.round {
-      transform: rotate(var(--az)) translate(3em)
+      	transform: rotate(var(--az)) translate(3em)
         rotate(calc(-1 * var(--az) - 30deg));
     }
   
@@ -229,111 +229,111 @@ body.fullscreen {
   
 @keyframes rotate {
     0% {
-      transform: rotate(0deg);
+      	transform: rotate(0deg);
     }
     14% {
-      transform: rotate(60deg);
+      	transform: rotate(60deg);
     }
     28% {
-      transform: rotate(120deg);
+      	transform: rotate(120deg);
     }
     42% {
-      transform: rotate(180deg);
+      	transform: rotate(180deg);
     }
     56% {
-      transform: rotate(240deg);
+      	transform: rotate(240deg);
     }
     70% {
-      transform: rotate(300deg);
+      	transform: rotate(300deg);
     }
     84% {
-      transform: rotate(360deg);
+      	transform: rotate(360deg);
     }
     100% {
-      transform: rotate(0deg);
+      	transform: rotate(0deg);
     }
   }
 @keyframes cycle {
     2% {
-      opacity: 100;
+      	opacity: 100;
     }
     5% {
-      opacity: 0;
+      	opacity: 0;
     }
     85% {
-      opacity: 0;
+      	opacity: 0;
     }
     86% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
 @keyframes cycle2 {
     70% {
-      opacity: 100;
+      	opacity: 100;
     }
     75% {
-      opacity: 0;
+      	opacity: 0;
     }
     87% {
-      opacity: 0;
+      	opacity: 0;
     }
     88% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
 @keyframes cycle3 {
     55% {
-      opacity: 100;
+      	opacity: 100;
     }
     60% {
-      opacity: 0;
+      	opacity: 0;
     }
     88% {
-      opacity: 0;
+      	opacity: 0;
     }
     89% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
 @keyframes cycle4 {
     40% {
-      opacity: 100;
+      	opacity: 100;
     }
     45% {
-      opacity: 0;
+      	opacity: 0;
     }
     89% {
-      opacity: 0;
+      	opacity: 0;
     }
     90% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
 @keyframes cycle5 {
     27% {
-      opacity: 100;
+      	opacity: 100;
     }
     32% {
-      opacity: 0;
+      	opacity: 0;
     }
     91% {
-      opacity: 0;
+      	opacity: 0;
     }
     92% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
 @keyframes cycle6 {
     15% {
-      opacity: 100;
+      	opacity: 100;
     }
     20% {
-      opacity: 0;
+      	opacity: 0;
     }
     93% {
-      opacity: 0;
+      	opacity: 0;
     }
     94% {
-      opacity: 100;
+      	opacity: 100;
     }
   }
